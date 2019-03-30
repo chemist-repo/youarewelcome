@@ -1,0 +1,44 @@
+@import 'vars';
+@import 'mixins';
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  font-family: 'Amatic SC', cursive;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  font-weight: $font-weight-default;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+.flex-inline {
+  display: inline-flex;
+}
+
+.flex, .flex-inline {
+  &.column {
+    flex-direction: column;
+  }
+  &.j-center {
+    justify-content: center;
+  }
+  &.a-center {
+    align-items: center;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
